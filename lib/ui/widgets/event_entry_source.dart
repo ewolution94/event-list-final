@@ -14,7 +14,10 @@ class EventEntrySource extends StatelessWidget {
       child: ClipRRect(
           borderRadius: BorderRadius.circular(16.0),
           clipBehavior: Clip.antiAlias,
-          child: Image.network(event.images[0].url, fit: BoxFit.contain,)),
+          child: Image.network(
+            event.images[0].url,
+            fit: BoxFit.contain,
+          )),
     );
   }
 }

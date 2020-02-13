@@ -66,7 +66,10 @@ class _EventListState extends State<EventList> {
           final displayedItem = widget.model.originalEvents[index];
           return ListTile(
             title: GestureDetector(
-              child: Text(displayedItem.name + ' (' + displayedItem.dates?.start?.localDate  + ')'),
+              child: Text(displayedItem.name +
+                  ' (' +
+                  displayedItem.dates?.start?.localDate +
+                  ')'),
               onTap: () => _goToDetailPage(context, displayedItem),
             ),
             leading: GestureDetector(
@@ -123,7 +126,10 @@ class _EventListState extends State<EventList> {
 
               final displayedItem = widget.model.wishlist[index];
               return ListTile(
-                title: Text(displayedItem.name + ' (' + displayedItem.dates?.start?.localDate  + ')'),
+                title: Text(displayedItem.name +
+                    ' (' +
+                    displayedItem.dates?.start?.localDate +
+                    ')'),
                 leading: IconButton(
                   icon: Icon(Icons.remove_circle),
                   onPressed: () => _removeFromWishlist(displayedItem),
